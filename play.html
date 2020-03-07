@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>title</title>
+		<meta name="description" content="description">
+		<meta name="keywords" content="keywords">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="js/player/mediaelementplayer.css">
+	</head>
+	<body>
+		<style type="text/css">
+			header .inner-ul>a:first-child.active span {
+				margin-left: 22px
+			}
+		</style>
+		<header>
+			<div class="inner detail-header clearfix">
+				<a class="logo-box" href="/">
+					<img data-src="images/logo.png|images/logo@2x.png" src="images/logo.png">
+				</a>
+				<a href="/sponsor" class="sponsor-box">
+					<img data-src="images/icon.png|images/icon.png" src="images/icon.png">
+				</a>
+				<ul class="nav">
+					<li class="col "><a href="/">应用</a></li>
+					<li class="col "><a href="/trends.html">排行</a></li>
+					<li class="col "><a href="/articles.html">文章</a></li>
+					<li class="col  active "><a href="/videos.html">视频</a></li>
+					<li class="last-col">
+						<div class="quick-search"><span>快速搜索</span><i class="icon-search"></i></div>
+					</li>
+				</ul>
+				<div class="gb-search">
+					<label for="search" class="icon-search"></label>
+					<input type="text" name="search" placeholder="输入搜索关键字" value="" autocorrect="off" autocapitalize="off"
+					 autocomplete="off" spellcheck="false"></div>
+				<button class="search-close">
+					<span></span>
+					<span></span>
+				</button>
+				<div class="search-menu" id="search-menu">
+					<ul></ul>
+				</div>
+			</div>
+			<div class="search-mask"></div>
+		</header>
+		<div class="head-video">
+			<div class="inner head-video-main">
+				<video autoplay poster="images/cover.png"
+				 style="height:100%;width:100%;" preload="none" controls playsinline webkit-playsinline>
+					<source src="http://img.1991th.com/tuchongeter/article/56e87e924624c7779.mp4" type="video/mp4">
+				</video></div>
+		</div>
+		<div class="video-data">
+			<div class="inner">
+				<div class="title">教你使用Final cut pro X制作拉伸缩放旋转的效果</div>
+				<div class="desc">
+					<p>1、使用稳定移动的视频效果更佳</p>
+					<p>2、旋转视频-10或者10度</p>
+					<p>3、缩放视频130%</p>
+					<p>4、点击裁剪，选择Ken Burns</p>
+					<div class="desc-mask"></div>
+				</div>
+				<div class="btn-desc">
+					<a class="btn-desc btn-desc-open" href="javascript:;">展开</a>
+					<a class="btn-desc btn-desc-close" href="javascript:;">收起</a></div>
+			</div>
+		</div>
+		<div class="articles videos inner clearfix">
+			
+		</div>
+		<footer>
+			<div class="footer-container inner">
+				<div class="f-hd">
+					<img class="col" data-src="https://static.skyandroid.cn/images/f-logo.png|https://static.skyandroid.cn/images/f-logo@2x.png"
+					 src="https://static.skyandroid.cn/images/f-logo.png">
+					<div class="text col">分享你喜欢的MAC应用</div>
+				</div>
+				<div class="copyright">Copyright © 2020 MacBL.com All rights reserved.</div>
+				<div class="bd">
+					<a href="/about-us">关于我们</a>
+					<a href="/copyright">版权声明</a>
+					<a href="mailto:service@macbl.com">联系我们</a>
+					<a href="/article/tips/1692">新手帮助</a>
+					<a href="/about-us?from=join-group">企鹅群</a></div>
+				<img class="footer-img" data-src="https://static.skyandroid.cn/images/f-img.png|https://static.skyandroid.cn/images/f-img@2x.png"
+				 src="https://static.skyandroid.cn/images/f-img.png">
+			</div>
+		</footer>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/search.js"></script>
+		<script type="text/javascript">
+			var search_default =
+				"<ul><li class=\"gray\">热门推荐</li><li><a href=\"/app/adobe-zii\">Adobe Zii</a></li><li><a href=\"/app/adobe-photoshop\">Adobe Photoshop</a></li><li><a href=\"/app/downie\">Downie</a></li><li><a href=\"/app/the-unarchiver\">The Unarchiver</a></li><li><a href=\"/app/dr.-unarchiver\">Dr. Unarchiver</a></li></ul>";
+			$(function() {
+				$("input[name='search']").keydown(function(even) {
+					if (even.keyCode == 13) {
+						search();
+					}
+				});
+				$(".search-btn, .icon-search").click(function() {
+					search();
+				});
+				$('input[name="search"]').keydown(function(event) {
+					var result_length = $("#search-menu .search-item").length;
+					if (event.keyCode == 38) {
+						var th = $("#search-menu .act");
+						if ($("#search-menu .act").length == 0) {
+							$("#search-menu li a").eq($("#search-menu li a").length - 1).addClass("act");
+						} else {
+							$(th).removeClass("act");
+							var index = $("#search-menu li a").index($(th));
+							if (index == 0) {
+								$("#search-menu li a").eq(result_length - 1).addClass("act");
+							} else {
+								$("#search-menu li a").eq(index - 1).addClass("act");
+							}
+						}
+						$('input[name="search"]').val($("#search-menu .act").html());
+					} else if (event.keyCode == 40) {
+						var th = $("#search-menu .act");
+						if ($("#search-menu .act").length == 0) {
+							$("#search-menu li a").eq(0).addClass("act");
+						} else {
+							$(th).removeClass("act");
+							var index = $("#search-menu li a").index($(th));
+							console.log(index);
+							if (index == result_length - 1) {
+								$("#search-menu li a").eq(0).addClass("act");
+							} else {
+								$("#search-menu li a").eq(index + 1).addClass("act");
+							}
+						}
+						$('input[name="search"]').val($("#search-menu .act").html());
+					}
+				});
+			});
+
+			function search() {
+				var search = $("input[name='search']").val().trim();
+				if (search == '' || search == undefined) {
+					return;
+				}
+				window.location.href = '/search/' + search;
+			}
+		</script>
+		<script src="js/player/mediaelement-and-player.min.js"></script>
+		<script src="js/player/lang/zh-cn.js"></script>
+		<script type="text/javascript">
+			mejs.i18n.language('zh-CN');
+			$('audio,video').mediaelementplayer({
+				hideVideoControlsOnPause: true,
+				hideVideoControlsOnLoad: true,
+				success: function(player, node) {
+					$(player).closest('.mejs__container').attr('lang', mejs.i18n.language());
+					$('html').attr('lang', mejs.i18n.language());
+				}
+			});
+		</script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'UA-110541265-1');
+		</script>
+	</body>
+</html>

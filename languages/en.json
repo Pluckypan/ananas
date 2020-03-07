@@ -1,0 +1,18 @@
+{
+	"_id": "en",
+	"home": "Home",
+	"writing": "Writing",
+	"about": "About",
+	"message": "Message",
+	"prepost": "Not Support(Pre)",
+	"nextpost": "Not Support(Nex)",
+	"backToTop": "Back to top",
+	"share": "Not Support(Share)",
+	"defaultCat": "default",
+	"sayHi": "Hi, I’m  ",
+	"followMe": "Find me on",
+	"total": "Total",
+	"notSupport": "Not Support",
+	"copyTo": "Copy to clipboard!",
+	"copied": "Copied"
+}

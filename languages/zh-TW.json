@@ -1,0 +1,18 @@
+{
+	"_id": "zh-TW",
+	"home": "首頁",
+	"writing": "寫作",
+	"about": "關於",
+	"message": "留言板",
+	"prepost": "上一條",
+	"nextpost": "下一條",
+	"backToTop": "返回頂部",
+	"share": "分享",
+	"defaultCat": "默認類別",
+	"sayHi": "好久不見哦,我是 ",
+	"followMe": "關注我 ",
+	"total": "總共",
+	"notSupport": "暫不支持哦",
+	"copyTo": "拷貝至粘貼板!",
+	"copied": "已粘貼"
+}

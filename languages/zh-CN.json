@@ -1,0 +1,18 @@
+{
+	"_id": "zh-CN",
+	"home": "首页",
+	"writing": "归档",
+	"about": "关于",
+	"message": "留言板",
+	"prepost": "上一条",
+	"nextpost": "下一条",
+	"backToTop": "回到顶部",
+	"share": "分享",
+	"defaultCat": "默认分类",
+	"sayHi": "好久不见,还好吗?我是 ",
+	"followMe": "订阅我",
+	"total": "共",
+	"notSupport": "暂不支持",
+	"copyTo": "拷贝至剪贴板!",
+	"copied": "已拷贝"
+}
