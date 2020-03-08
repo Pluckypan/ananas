@@ -1,6 +1,62 @@
 var search_result = [],
 	search_word = "";
 
+var search_default =
+	"<ul><li class=\"gray\">热门推荐</li><li><a href=\"/app/adobe-zii\">Adobe Zii</a></li><li><a href=\"/app/adobe-photoshop\">Adobe Photoshop</a></li><li><a href=\"/app/downie\">Downie</a></li><li><a href=\"/app/the-unarchiver\">The Unarchiver</a></li><li><a href=\"/app/dr.-unarchiver\">Dr. Unarchiver</a></li></ul>";
+
+function searchInit() {
+	$("input[name='search']").keydown(function(even) {
+		if (even.keyCode == 13) {
+			search();
+		}
+	});
+	$(".search-btn, .icon-search").click(function() {
+		search();
+	});
+	$('input[name="search"]').keydown(function(event) {
+		var result_length = $("#search-menu .search-item").length;
+		if (event.keyCode == 38) {
+			var th = $("#search-menu .act");
+			if ($("#search-menu .act").length == 0) {
+				$("#search-menu li a").eq($("#search-menu li a").length - 1).addClass("act");
+			} else {
+				$(th).removeClass("act");
+				var index = $("#search-menu li a").index($(th));
+				if (index == 0) {
+					$("#search-menu li a").eq(result_length - 1).addClass("act");
+				} else {
+					$("#search-menu li a").eq(index - 1).addClass("act");
+				}
+			}
+			$('input[name="search"]').val($("#search-menu .act").html());
+		} else if (event.keyCode == 40) {
+			var th = $("#search-menu .act");
+			if ($("#search-menu .act").length == 0) {
+				$("#search-menu li a").eq(0).addClass("act");
+			} else {
+				$(th).removeClass("act");
+				var index = $("#search-menu li a").index($(th));
+				console.log(index);
+				if (index == result_length - 1) {
+					$("#search-menu li a").eq(0).addClass("act");
+				} else {
+					$("#search-menu li a").eq(index + 1).addClass("act");
+				}
+			}
+			$('input[name="search"]').val($("#search-menu .act").html());
+		}
+	});
+}
+
+function search() {
+	var search = $("input[name='search']").val().trim();
+	if (search == '' || search == undefined) {
+		return;
+	}
+	var relative_path = $("meta[name=relativePath]").attr("content");
+	window.location.href = relative_path + 'search.html?wd=' + search;
+}
+
 function associate_search(a, s) {
 	null != search_result[search_word = a] ? search_append(search_result[a], s) : $.ajax({
 		url: "https://search.macbl.com/api/words",
@@ -67,4 +123,5 @@ $(function() {
 		var e = $('input[name="search"]').val();
 		"" == $.trim(e) ? search_menu_empty($(this)) : associate_search(e, $(this))
 	})
+	searchInit();
 });

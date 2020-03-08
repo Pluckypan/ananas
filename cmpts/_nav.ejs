@@ -11,22 +11,15 @@
 			<li class="col <%='trends'==type?'active':''%>"><a href="<%=relative_path%>trends.html">排行</a></li>
 			<li class="col <%='articles'==type?'active':''%>"><a href="<%=relative_path%>articles.html">文章</a></li>
 			<li class="col <%='videos'==type?'active':''%>"><a href="<%=relative_path%>videos.html">视频</a></li>
-			<li class="last-col">
-				<div class="quick-search"><span>快速搜索</span><i class="icon-search"></i></div>
-			</li>
+			<% if(type != 'search'){ %>
+				<li class="last-col">
+					<div class="quick-search"><span>快速搜索</span><i class="icon-search"></i></div>
+				</li>
+			<%}%>
 		</ul>
-		<div class="gb-search">
-			<label for="search" class="icon-search"></label>
-			<input type="text" name="search" placeholder="输入搜索关键字" value="" autocorrect="off" autocapitalize="off"
-			 autocomplete="off" spellcheck="false"/>
-		</div>
-		<button class="search-close">
-			<span></span>
-			<span></span>
-		</button>
-		<div class="search-menu" id="search-menu">
-			<ul></ul>
-		</div>
+		<% if(type != 'search'){ %>
+			<%- include('_search_top',{type: type}); %>
+		<%}%>
 	</div>
 	<div class="search-mask"></div>
 	<% if( type == 'videos'){ %> 
