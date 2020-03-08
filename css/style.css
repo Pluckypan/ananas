@@ -3696,7 +3696,7 @@ footer .bd a:last-child:after {
 
 .format a {
 	transition: all .3s ease;
-	border-bottom: 1px dotted #ccc;
+	border-bottom: 0px dotted #ccc;
 	padding-bottom: 3px
 }
 

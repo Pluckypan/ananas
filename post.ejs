@@ -4,7 +4,7 @@
 <div class="articles inner clearfix">
 	<div class="content article-detail-content">
 		<div class="head-pic">
-			<img itemprop="thumbnailUrl" src="https://static.skyandroid.cn/images/placeholder-article-list.png" data-src="<%=relative_path%>images/cover.png"/>
+			<img itemprop="thumbnailUrl" src="<%=relative_path%>images/cover.png" data-src="<%=relative_path%>images/cover.png"/>
 		</div>
 		<div class="g-bd">
 			<h1 class="title" itemprop="headline">MacOS装机必备应用下载合集(2020年03月更新)</h1>
@@ -49,47 +49,7 @@
 		</div>
 		<div class="g-box">
 			<div class="title-nop">相关文章</div>
-			<ul class="hot-articles">
-				<li>
-					<a href="/article/apps/best-osx-macos-apps-you-need-2019">
-						<span class="thumb">
-							<img src="https://static.skyandroid.cn/images/placeholder-article-small.png" data-src="https://static.skyandroid.cn/images/manager-header/20190326155357165132477.png?x-oss-process=style/h_96-w_240|https://static.skyandroid.cn/images/manager-header/20190326155357165132477.png?x-oss-process=style/h_192-w_480">
-						</span>
-						<span class="bd">
-							<span class="article-title">MacOS装机必备应用下载合集(201...</span>
-							<span class="state">
-								<i class="icon-date"></i>
-								<span class="col">2020.01.16</span>
-							</span>
-						</span>
-					</a></li>
-				<li>
-					<a href="/article/apps/best-osx-macos-apps-you-need-2018">
-						<span class="thumb">
-							<img src="https://static.skyandroid.cn/images/placeholder-article-small.png" data-src="https://static.skyandroid.cn/images/manager-header/20181220154528962077781.png?x-oss-process=style/h_96-w_240|https://static.skyandroid.cn/images/manager-header/20181220154528962077781.png?x-oss-process=style/h_192-w_480">
-						</span>
-						<span class="bd">
-							<span class="article-title">macOS装机必备应用下载合集(201...</span>
-							<span class="state">
-								<i class="icon-date"></i>
-								<span class="col">2018.12.10</span>
-							</span>
-						</span>
-					</a></li>
-				<li>
-					<a href="/article/tips/top-10-macos-keyboard-shortcuts">
-						<span class="thumb">
-							<img src="https://static.skyandroid.cn/images/placeholder-article-small.png" data-src="https://static.skyandroid.cn/images/manager-header/2018012215166064632714.jpeg?x-oss-process=style/h_96-w_240|https://static.skyandroid.cn/images/manager-header/2018012215166064632714.jpeg?x-oss-process=style/h_192-w_480">
-						</span>
-						<span class="bd">
-							<span class="article-title">大家应该知道的十大macOS键盘快...</span>
-							<span class="state">
-								<i class="icon-date"></i>
-								<span class="col">2018.01.22</span>
-							</span>
-						</span>
-					</a></li>
-			</ul>
+			<%- include('cmpts/_card_hot',{type: "post"}); %>
 		</div>
 	</div>
 </div>
