@@ -9,69 +9,76 @@
 		<meta name="keywords" content="keywords">
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" href="js/player/mediaelementplayer.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper.css">
 	</head>
 	<body>
-		<style type="text/css">
-			header .inner-ul>a:first-child.active span {
-				margin-left: 22px
-			}
-		</style>
 		<header>
-			<div class="inner detail-header clearfix">
+			<div class="inner clearfix">
 				<a class="logo-box" href="/">
 					<img data-src="images/logo.png|images/logo@2x.png" src="images/logo.png">
 				</a>
 				<a href="/sponsor" class="sponsor-box">
 					<img data-src="images/icon.png|images/icon.png" src="images/icon.png">
 				</a>
-				<ul class="nav">
-					<li class="col "><a href="/">应用</a></li>
+				<ul class="nav clearfix">
+					<li class="col  active "><a href="/">应用</a></li>
 					<li class="col "><a href="/trends.html">排行</a></li>
 					<li class="col "><a href="/articles.html">文章</a></li>
-					<li class="col  active "><a href="/videos.html">视频</a></li>
-					<li class="last-col">
-						<div class="quick-search"><span>快速搜索</span><i class="icon-search"></i></div>
-					</li>
+					<li class="col "><a href="/videos.html">视频</a></li>
 				</ul>
-				<div class="gb-search">
-					<label for="search" class="icon-search"></label>
-					<input type="text" name="search" placeholder="输入搜索关键字" value="" autocorrect="off" autocapitalize="off"
-					 autocomplete="off" spellcheck="false"></div>
-				<button class="search-close">
-					<span></span>
-					<span></span>
-				</button>
-				<div class="search-menu" id="search-menu">
-					<ul></ul>
-				</div>
 			</div>
-			<div class="search-mask"></div>
 		</header>
-		<div class="head-video">
-			<div class="inner head-video-main">
-				<video autoplay poster="images/cover.png"
-				 style="height:100%;width:100%;" preload="none" controls playsinline webkit-playsinline>
-					<source src="http://img.1991th.com/tuchongeter/article/56e87e924624c7779.mp4" type="video/mp4">
-				</video></div>
-		</div>
-		<div class="video-data">
+		<div class="search-wrap search-wrap-default">
 			<div class="inner">
-				<div class="title">教你使用Final cut pro X制作拉伸缩放旋转的效果</div>
-				<div class="desc">
-					<p>1、使用稳定移动的视频效果更佳</p>
-					<p>2、旋转视频-10或者10度</p>
-					<p>3、缩放视频130%</p>
-					<p>4、点击裁剪，选择Ken Burns</p>
-					<div class="desc-mask"></div>
+				<div class="input-box">
+					<input type="text" name="search" placeholder="输入搜索关键字" autocorrect="off" autocapitalize="off" autocomplete="off"
+					 spellcheck="false" value="Adobe">
+					<button class="icon-search-box">
+						<i class="icon-search"></i>
+					</button>
+					<div class="menu" id="search-menu" style="display: none;"></div>
 				</div>
-				<div class="btn-desc">
-					<a class="btn-desc btn-desc-open" href="javascript:;">展开</a>
-					<a class="btn-desc btn-desc-close" href="javascript:;">收起</a></div>
 			</div>
 		</div>
-		<div class="articles videos inner clearfix">
-			
+		<div class="tabs-box clearfix inner">
+			<div class="tabs">
+				<a href="/search/Adobe" class="tab ">全部</a>
+				<a href="/app/search/Adobe?type=app" class="tab ">
+					应用(28)
+				</a>
+				<a href="/plugin/search/Adobe?type=plugin" class="tab  active ">
+					插件(1)
+				</a>
+				<a href="/article/search/Adobe?type=article" class="tab ">
+					文章(8)
+				</a>
+				<a href="/video/search/Adobe?type=video" class="tab ">
+					视频(15)
+				</a></div>
+		</div>
+		<div class="list-wrap inner">
+			<div class="apps">
+				<ul class="items clearfix">
+					<li class="item col" data-animation="{'oDuration':1,'tDuration':1.2,'dir':'y','delay':0.2,'distance':60}">
+						<a href="/post.html">
+							<div class="item-left col">
+								<img src="https://static.skyandroid.cn/images/placeholder.png" data-src="https://static.skyandroid.cn/images/logo/20190308155204059453294.png?x-oss-process=style/h_100-w_100|https://static.skyandroid.cn/images/logo/20190308155204059453294.png?x-oss-process=style/h_200-w_200"></div>
+							<div class="item-right col">
+								<div class="hd">Mocha Pro Adobe 5.6.0</div>
+								<div class="md"><span class="tag col">2D抠图跟踪软件</span> 它拥有磁性样条与边缘对齐，手绘样条，和几何形状的工具和GPU加速平面跟踪 和对象移除功能、支持Retina
+									/...</div>
+								<div class="bd">
+									<span class="state col">
+										<i class="icon-date col"></i>
+										<span class="col">2019.03.09</span>
+									</span></div>
+							</div>
+						</a></li>
+					<li class="item col" data-animation="{'oDuration':1,'tDuration':1.2,'dir':'y','delay':1,'distance':60}">
+						<a class="empty" href="#">
+						</a></li>
+				</ul>
+			</div>
 		</div>
 		<footer>
 			<div class="footer-container inner">
@@ -148,28 +155,6 @@
 				}
 				window.location.href = '/search.html?wd=' + search;
 			}
-		</script>
-		<script src="js/player/mediaelement-and-player.min.js"></script>
-		<script src="js/player/lang/zh-cn.js"></script>
-		<script type="text/javascript">
-			mejs.i18n.language('zh-CN');
-			$('audio,video').mediaelementplayer({
-				hideVideoControlsOnPause: true,
-				hideVideoControlsOnLoad: true,
-				success: function(player, node) {
-					$(player).closest('.mejs__container').attr('lang', mejs.i18n.language());
-					$('html').attr('lang', mejs.i18n.language());
-				}
-			});
-		</script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-			gtag('config', 'UA-110541265-1');
 		</script>
 	</body>
 </html>
