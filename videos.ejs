@@ -1,0 +1,35 @@
+<%- include('cmpts/_header',{type: "videos"}); %>
+<style type="text/css">
+	header .inner-ul>a:first-child.active span {
+		margin-left: 22px
+	}
+</style>	
+<%- include('cmpts/_nav',{type: "videos"}); %>
+<div class="list-wrap inner">
+	<div class="apps articles videos">
+		<div class="hd hd-normal clearfix">
+			<div class="left">Mac小技巧</div>
+			<div class="top50-cate">
+				<div class="top50-cate-curr">
+					<span>所有分类</span>
+					<i class="top50-cate-arrow"></i></div>
+				<ul class="top50-cate-drop">
+					<li class="active">
+						<a href="/video/tips">所有分类</a></li>
+					<li>
+						<a href="/video/tips_小白教程">小白教程</a></li>
+					<li>
+						<a href="/video/tips_进阶教程">进阶教程</a></li>
+				</ul>
+			</div>
+		</div>
+		<%- include('cmpts/_card_video',{type: "videos"}); %>		
+	</div>
+	<ul class="macBL-pager">
+		<li class="prev disabled"><i class="icon-left"></i></li>
+		<li class="active"><a href="https://www.macbl.com/video/tips?&page=1">1</a></li>
+		<li><a href="https://www.macbl.com/video/tips?&page=2">2</a></li>
+		<li class="next"><a href="https://www.macbl.com/video/tips?&page=2"><i class="icon-right"></i></a></li>
+	</ul>
+</div>	
+<%- include('cmpts/_footer',{type: "videos"}); %>	

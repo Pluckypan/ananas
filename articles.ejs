@@ -1,0 +1,41 @@
+<%- include('cmpts/_header',{type: "articles"}); %>
+<%- include('cmpts/_nav',{type: "articles"}); %>
+<%- include('cmpts/_tags',{type: "articles"}); %>
+<div class="articles inner clearfix">
+	<div class="article-hd hd hd-normal clearfix">
+		<div class="left">全部文章</div>
+	</div>
+	<div class="content">
+		<%- include('cmpts/_card_article',{type: "articles"}); %>
+		<%- include('cmpts/_pagenation',{type: "articles"}); %>
+	</div>
+	<div class="article-sidebar">
+		<div class="g-box no-padding">
+			<div class="title">文章分类</div>
+			<ul class="article-type">
+				<li class="active">
+					<a class="article-type-a clearfix" href="/article">
+						<span class="text-left">全部文章</span>
+						<span class="text-right">852篇</span>
+					</a></li>
+				<li>
+					<a class="article-type-a clearfix" href="/article/game-zone">
+						<span class="text-left">游戏专区</span>
+						<span class="text-right">21篇</span>
+					</a></li>
+				<li>
+					<a class="article-type-a clearfix" href="/article/apps">
+						<span class="text-left">精选应用</span>
+						<span class="text-right">123篇</span>
+					</a></li>
+			</ul>
+		</div>
+		<div class="g-box no-padding">
+			<a href="http://wm.makeding.com/iclk/?zoneid=23080" class="post-img" target="_blank" data-type="admodel"
+			 data-resource="12">
+				<img src="https://static.skyandroid.cn/images/app_screen/20181216154489802233249.png">
+				<span class="tag">AD</span>
+			</a></div>
+	</div>
+</div>	
+<%- include('cmpts/_footer',{type: "articles"}); %>

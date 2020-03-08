@@ -1,0 +1,35 @@
+<header>
+	<div class="inner detail-header clearfix">
+		<a class="logo-box" href="/">
+			<img data-src="images/logo.png|images/logo@2x.png" src="images/logo.png"/>
+		</a>
+		<a href="/sponsor" class="sponsor-box">
+			<img data-src="images/icon.png|images/icon.png" src="images/icon.png"/>
+		</a>
+		<ul class="nav">
+			<li class="col <%='index'==type?'active':''%>"><a href="/">首页</a></li>
+			<li class="col <%='trends'==type?'active':''%>"><a href="/trends.html">排行</a></li>
+			<li class="col <%='articles'==type?'active':''%>"><a href="/articles.html">文章</a></li>
+			<li class="col <%='videos'==type?'active':''%>"><a href="/videos.html">视频</a></li>
+			<li class="last-col">
+				<div class="quick-search"><span>快速搜索</span><i class="icon-search"></i></div>
+			</li>
+		</ul>
+		<div class="gb-search">
+			<label for="search" class="icon-search"></label>
+			<input type="text" name="search" placeholder="输入搜索关键字" value="" autocorrect="off" autocapitalize="off"
+			 autocomplete="off" spellcheck="false"/>
+		</div>
+		<button class="search-close">
+			<span></span>
+			<span></span>
+		</button>
+		<div class="search-menu" id="search-menu">
+			<ul></ul>
+		</div>
+	</div>
+	<div class="search-mask"></div>
+	<% if( type == 'videos'){ %> 
+		<%- include('_tags_video',{type: type}); %>
+	<%}%>
+</header>

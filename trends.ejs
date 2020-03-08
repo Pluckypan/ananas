@@ -1,0 +1,31 @@
+<%- include('cmpts/_header',{type: "trends"}); %>
+<%- include('cmpts/_nav',{type: "trends"}); %>
+<%- include('cmpts/_tags',{type: "trends"}); %>
+<div class="list-wrap inner">
+	<div class="apps top50-apps">
+		<div class="hd hd-normal clearfix">
+			<div class="left">热门排行榜</div>
+			<div class="top50-cate">
+				<div class="top50-cate-curr">
+					<span>所有分类</span><i class="top50-cate-arrow"></i></div>
+				<ul class="top50-cate-drop">
+					<li class="active">
+						<a href="/app/top/all">所有分类</a></li>
+					<li>
+						<a href="/app/top/multimedia-music">媒体音乐</a></li>
+					<li>
+						<a href="/app/top/graphics-design">图形设计</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="top50-col">
+			<div class="top50-hd">总排行</div>
+			<%- include('cmpts/_card_trends',{type: "trends"}); %>
+		</div>
+		<div class="top50-col">
+			<div class="top50-hd">月排行</div>
+			<%- include('cmpts/_card_trends',{type: "trends"}); %>
+		</div>
+	</div>
+</div>	
+<%- include('cmpts/_footer',{type: "trends"}); %>
