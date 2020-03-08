@@ -2124,8 +2124,8 @@ footer .bd a:last-child:after {
 .method-box,
 .preview-box,
 .update-box {
-	margin-top: 30px;
-	border-bottom: 1px #e5e5e5 solid;
+	margin-top: 15px;
+	/* border-bottom: 1px #e5e5e5 solid; */
 	position: relative
 }
 
@@ -2195,7 +2195,7 @@ footer .bd a:last-child:after {
 .method-box .swiper-button-prev,
 .preview-box .swiper-button-prev,
 .update-box .swiper-button-prev {
-	left: -26px
+	left: 20px
 }
 
 .app-history .swiper-button-next,
@@ -2203,7 +2203,7 @@ footer .bd a:last-child:after {
 .method-box .swiper-button-next,
 .preview-box .swiper-button-next,
 .update-box .swiper-button-next {
-	right: -28px
+	right: 40px
 }
 
 .app-history .swiper-button-next,
@@ -2217,7 +2217,9 @@ footer .bd a:last-child:after {
 .update-box .swiper-button-next,
 .update-box .swiper-button-prev {
 	opacity: 0;
-	transition: all .25s
+	transition: all .25s;
+	width: 32px;
+	height: 32px;
 }
 
 .app-history:hover .swiper-button-next,
@@ -3319,7 +3321,7 @@ footer .bd a:last-child:after {
 
 .article-sidebar .g-box {
 	border-radius: 10px;
-	padding: 30px;
+	padding: 25px;
 	background: #fff;
 	margin-bottom: 20px
 }
@@ -3569,7 +3571,7 @@ footer .bd a:last-child:after {
 }
 
 .article-sidebar .g-box .desc-bd {
-	margin-top: 30px
+	margin-top: 10px
 }
 
 .article-sidebar .g-box .desc-bd .rows {
@@ -4664,4 +4666,10 @@ footer .bd a:last-child:after {
 
 .opacity {
 	opacity: 0
+}
+
+.post_code {
+	padding: 20px;
+	background-color: #ddd;
+	border-radius: 5px;
 }

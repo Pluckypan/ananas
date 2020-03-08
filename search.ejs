@@ -1,0 +1,36 @@
+<%- include('cmpts/_header',{type: "search"}); %>
+<%- include('cmpts/_nav',{type: "search"}); %>
+<div class="search-wrap search-wrap-default">
+	<div class="inner">
+		<div class="input-box">
+			<input type="text" name="search" placeholder="输入搜索关键字" autocorrect="off" autocapitalize="off" autocomplete="off"
+			 spellcheck="false" value="Adobe">
+			<button class="icon-search-box">
+				<i class="icon-search"></i>
+			</button>
+			<div class="menu" id="search-menu" style="display: none;"></div>
+		</div>
+	</div>
+</div>
+<div class="tabs-box clearfix inner">
+	<div class="tabs">
+		<a href="/search/Adobe" class="tab ">全部</a>
+		<a href="/app/search/Adobe?type=app" class="tab ">
+			应用(28)
+		</a>
+		<a href="/plugin/search/Adobe?type=plugin" class="tab  active ">
+			插件(3)
+		</a>
+		<a href="/article/search/Adobe?type=article" class="tab ">
+			文章(8)
+		</a>
+		<a href="/video/search/Adobe?type=video" class="tab ">
+			视频(15)
+		</a></div>
+</div>
+<div class="list-wrap inner">
+	<div class="apps">
+		<%- include('cmpts/_card_normal',{type: "search"}); %>	
+	</div>
+</div>
+<%- include('cmpts/_footer',{type: "search"}); %>	

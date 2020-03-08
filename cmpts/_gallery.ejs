@@ -1,0 +1,13 @@
+<div class="preview-box">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<%galleryData.forEach(function(g,i){%>
+				<a href="<%=g%>" class="swiper-slide fancybox" data-fancybox="group">
+					<img itemprop="screenshot" data-src="<%=g%>" src="<%=g%>">
+				</a>
+			<%})%>
+		</div>
+	</div>
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+</div>
