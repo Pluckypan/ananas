@@ -4648,3 +4648,20 @@ footer .bd a:last-child:after {
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%)
 }
+
+.bdsharebuttonbox a {
+	background: none !important;
+	float: inherit !important;
+	display: block !important;
+	margin: 0 !important;
+	margin-bottom: 6px !important;
+	padding: 0 !important;
+	width: 40px !important;
+	height: 40px !important;
+	background-size: cover;
+	box-sizing: border-box
+}
+
+.opacity {
+	opacity: 0
+}
