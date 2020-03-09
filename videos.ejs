@@ -25,11 +25,6 @@
 		</div>
 		<%- include('cmpts/_card_video',{type: "videos"}); %>		
 	</div>
-	<ul class="macBL-pager">
-		<li class="prev disabled"><i class="icon-left"></i></li>
-		<li class="active"><a href="https://www.macbl.com/video/tips?&page=1">1</a></li>
-		<li><a href="https://www.macbl.com/video/tips?&page=2">2</a></li>
-		<li class="next"><a href="https://www.macbl.com/video/tips?&page=2"><i class="icon-right"></i></a></li>
-	</ul>
+	<%- include('cmpts/_pagenation',{type: "videos"}); %>
 </div>	
 <%- include('cmpts/_footer',{type: "videos"}); %>	

@@ -1,0 +1,11 @@
+<%- include('cmpts/_header',{type: "apps"}); %>
+<%- include('cmpts/_nav',{type: "apps"}); %>
+<%- include('cmpts/_tags',{type: "apps"}); %>
+<div class="articles inner clearfix">
+	<div class="article-hd hd hd-normal clearfix">
+		<div class="left">全部应用</div>
+	</div>
+	<%- include('cmpts/_card_normal',{type: "apps"}); %>
+	<%- include('cmpts/_pagenation',{type: "apps"}); %>
+</div>	
+<%- include('cmpts/_footer',{type: "apps"}); %>
