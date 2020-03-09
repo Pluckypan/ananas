@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%=language&&language._id?language._id:'en'%>">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<title>title</title>
-		<meta name="description" content="description">
+		<title><%=describe.name?describe.name+' - ':''%><%=config.title%></title>
+		<%if(config.iconfont&&config.iconfont.link){%>
+			<link rel="stylesheet" href="<%=config.iconfont.link%>">
+		<%}%>
+		<meta name="description" content="<%=describe.desc%>">
+		<meta name="author" content="<%=config.user.name%>">
 		<meta name="keywords" content="keywords">
 		<meta name="relativePath" content="<%=relative_path%>">
 		<link rel="shortcut icon" type="x-icon" href="<%=relative_path%>images/favicon.ico" />
